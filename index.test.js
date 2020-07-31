@@ -408,7 +408,7 @@ describe('Configure AWS Credentials', () => {
         expect(mockStsAssumeRole).toHaveBeenCalledWith({
             RoleArn: ROLE_ARN,
             RoleSessionName: 'GitHubActions',
-            DurationSeconds: 6 * 3600,
+            DurationSeconds: 3600,
             Tags: [
                 {Key: 'GitHub', Value: 'Actions'},
                 {Key: 'Repository', Value: ENVIRONMENT_VARIABLE_OVERRIDES.GITHUB_REPOSITORY},
@@ -452,7 +452,7 @@ describe('Configure AWS Credentials', () => {
         expect(mockStsAssumeRole).toHaveBeenCalledWith({
             RoleArn: ROLE_ARN,
             RoleSessionName: 'MySessionName',
-            DurationSeconds: 6 * 3600,
+            DurationSeconds: 3600,
             Tags: [
                 {Key: 'GitHub', Value: 'Actions'},
                 {Key: 'Repository', Value: ENVIRONMENT_VARIABLE_OVERRIDES.GITHUB_REPOSITORY},
@@ -474,7 +474,7 @@ describe('Configure AWS Credentials', () => {
         expect(mockStsAssumeRole).toHaveBeenCalledWith({
             RoleArn: 'arn:aws:iam::123456789012:role/MY-ROLE',
             RoleSessionName: 'GitHubActions',
-            DurationSeconds: 6 * 3600,
+            DurationSeconds: 3600,
             Tags: [
                 {Key: 'GitHub', Value: 'Actions'},
                 {Key: 'Repository', Value: ENVIRONMENT_VARIABLE_OVERRIDES.GITHUB_REPOSITORY},
@@ -496,7 +496,7 @@ describe('Configure AWS Credentials', () => {
         expect(mockStsAssumeRole).toHaveBeenCalledWith({
             RoleArn: ROLE_ARN,
             RoleSessionName: 'GitHubActions',
-            DurationSeconds: 6 * 3600,
+            DurationSeconds: 3600,
             Tags: [
                 {Key: 'GitHub', Value: 'Actions'},
                 {Key: 'Repository', Value: ENVIRONMENT_VARIABLE_OVERRIDES.GITHUB_REPOSITORY},
@@ -523,7 +523,7 @@ describe('Configure AWS Credentials', () => {
         expect(mockStsAssumeRole).toHaveBeenCalledWith({
             RoleArn: ROLE_ARN,
             RoleSessionName: 'GitHubActions',
-            DurationSeconds: 6 * 3600,
+            DurationSeconds: 3600,
             Tags: [
                 {Key: 'GitHub', Value: 'Actions'},
                 {Key: 'Repository', Value: ENVIRONMENT_VARIABLE_OVERRIDES.GITHUB_REPOSITORY},
@@ -545,7 +545,7 @@ describe('Configure AWS Credentials', () => {
         expect(mockStsAssumeRole).toHaveBeenCalledWith({
             RoleArn: ROLE_ARN,
             RoleSessionName: 'GitHubActions',
-            DurationSeconds: 21600,
+            DurationSeconds: 3600,
             Tags: undefined
         })
     });
@@ -559,7 +559,7 @@ describe('Configure AWS Credentials', () => {
         expect(mockStsAssumeRole).toHaveBeenCalledWith({
             RoleArn: ROLE_ARN,
             RoleSessionName: 'GitHubActions',
-            DurationSeconds: 21600,
+            DurationSeconds: 3600,
             Tags: [
                 {Key: 'GitHub', Value: 'Actions'},
                 {Key: 'Repository', Value: ENVIRONMENT_VARIABLE_OVERRIDES.GITHUB_REPOSITORY},
@@ -581,7 +581,7 @@ describe('Configure AWS Credentials', () => {
         expect(mockStsAssumeRole).toHaveBeenCalledWith({
             RoleArn: ROLE_ARN,
             RoleSessionName: 'GitHubActions',
-            DurationSeconds: 21600,
+            DurationSeconds: 3600,
             Tags: [
                 {Key: 'GitHub', Value: 'Actions'},
                 {Key: 'Repository', Value: ENVIRONMENT_VARIABLE_OVERRIDES.GITHUB_REPOSITORY},

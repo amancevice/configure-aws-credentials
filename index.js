@@ -2,9 +2,8 @@ const core = require('@actions/core');
 const aws = require('aws-sdk');
 const assert = require('assert');
 
-// The max time that a GitHub action is allowed to run is 6 hours.
-// That seems like a reasonable default to use if no role duration is defined.
-const MAX_ACTION_RUNTIME = 6 * 3600;
+// The max time that a GitHub action is allowed to run is 1 hour, the same default as the AWS CLI.
+const MAX_ACTION_RUNTIME = 3600;
 const USER_AGENT = 'configure-aws-credentials-for-github-actions';
 const MAX_TAG_VALUE_LENGTH = 256;
 const SANITIZATION_CHARACTER = '_';
